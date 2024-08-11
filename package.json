@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+  },
+  "dependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@types/youtube-player": "^5.5.11",
+    "contentful": "^10.13.2",
+    "contentful-management": "^11.31.1",
+    "nuxt": "^3.12.4",
+    "tua-body-scroll-lock": "^1.5.0",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "ts-node": "^10.9.2"
+  }
+}

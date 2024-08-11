@@ -1,0 +1,168 @@
+@charset "utf-8";
+@use "~/assets/scss/foundation/_variables" as *;
+
+// -----------------------------------------------------
+// Media Query
+// -----------------------------------------------------
+@mixin max($width: $width-desktop - 1px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @include min($width-phablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include min($width-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include min($width-desktop) {
+    @content;
+  }
+}
+
+// -----------------------------------------------------
+// Position
+// -----------------------------------------------------
+@mixin fit-full($position: absolute) {
+  width: 100%;
+  height: 100%;
+  position: $position;
+  top: 0;
+  left: 0;
+}
+
+@mixin center($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-vertical($position: absolute) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-horizontal($position: absolute) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// -----------------------------------------------------
+// Accessibility
+// -----------------------------------------------------
+@mixin focus-visible {
+  html:not([data-whatinput="mouse"]):not([data-whatinput="touch"]) &:focus {
+    @content;
+  }
+}
+
+// -----------------------------------------------------
+// Background
+// -----------------------------------------------------
+@mixin bg-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin bg-contain {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// -----------------------------------------------------
+// Text
+// -----------------------------------------------------
+@mixin hide-text {
+  font: 0 / 0;
+  color: transparent;
+}
+
+@mixin link($color) {
+  position: relative;
+  z-index: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid currentColor;
+  @include focus-visible {
+    color: $color;
+  }
+  @include desktop {
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+@mixin font-xs {
+  font-size: 1rem;
+  @include tablet {
+    font-size: 1.1rem;
+  }
+  @include desktop {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin font-s {
+  font-size: 1.1rem;
+  @include tablet {
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    font-size: 1.3rem;
+  }
+}
+
+@mixin font-m {
+  font-size: 1.3rem;
+  @include tablet {
+    font-size: 1.4rem;
+  }
+  @include desktop {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin font-l {
+  font-size: 1.7rem;
+  @include tablet {
+    font-size: 2rem;
+  }
+  @include desktop {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin font-xl {
+  font-size: 1.8rem;
+  @include tablet {
+    font-size: 2.2rem;
+  }
+  @include desktop {
+    font-size: 2.4rem;
+  }
+}
