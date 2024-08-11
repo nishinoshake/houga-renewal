@@ -36,6 +36,11 @@ const movies = computed(() => state.movies)
         margin-top: 2rem;
       }
     }
+    &:nth-child(-n+10) {
+      .movie-button {
+        padding-right: 4em;
+      }
+    }
   }
   &-button {
     color: $color-dark;
