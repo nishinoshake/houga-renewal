@@ -75,9 +75,6 @@ onMounted(() => {
   }
   &-link {
     display: flex;
-    @include focus-visible {
-      color: $color-link;
-    }
     @include desktop {
       padding: 0 2rem 0.1rem;
       &:hover {

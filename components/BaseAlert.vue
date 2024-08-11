@@ -61,9 +61,6 @@ export default {
     color: $color-white;
     background-color: $color-darker;
     @include font-s;
-    @include focus-visible {
-      background-color: $color-black;
-    }
     @include desktop {
       &:hover {
         background-color: $color-black;

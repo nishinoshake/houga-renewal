@@ -44,15 +44,6 @@ const movies = computed(() => state.movies)
     @include max {
       background: rgba($color-white, 0.9);
     }
-    @include focus-visible {
-      .movie-title {
-        background-color: $color-black;
-      }
-      .movie-button-inside {
-        background-color: $color-darker;
-        color: $color-white;
-      }
-    }
     @include desktop {
       width: 100%;
       display: flex;

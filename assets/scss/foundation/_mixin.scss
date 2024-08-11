@@ -71,15 +71,6 @@
 }
 
 // -----------------------------------------------------
-// Accessibility
-// -----------------------------------------------------
-@mixin focus-visible {
-  html:not([data-whatinput="mouse"]):not([data-whatinput="touch"]) &:focus {
-    @content;
-  }
-}
-
-// -----------------------------------------------------
 // Background
 // -----------------------------------------------------
 @mixin bg-cover {
@@ -107,9 +98,6 @@
   z-index: 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid currentColor;
-  @include focus-visible {
-    color: $color;
-  }
   @include desktop {
     &:hover {
       color: $color;

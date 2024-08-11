@@ -32,7 +32,7 @@ html {
 }
 
 * {
-  -webkit-tap-highlight-color: rgba($color-darker, 0.5);
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,

@@ -28,19 +28,10 @@ const playShuffle = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: inherit;
     @include font-l;
     @include desktop {
       border-width: 2px;
-    }
-    @include focus-visible {
-      color: $color-white;
-      background-color: $color-black;
-      span {
-        border-color: $color-white;
-        &:before {
-          border-color: transparent transparent transparent $color-white;
-        }
-      }
     }
     @include desktop {
       &:hover {

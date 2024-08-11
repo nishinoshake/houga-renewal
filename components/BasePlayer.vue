@@ -326,9 +326,6 @@ watch(isPlaying, (val) => {
         height: 100%;
         position: relative;
         background-color: $color-gray;
-        @include focus-visible {
-          background-color: $color-gray-dark;
-        }
         @include desktop {
           &:hover {
             background-color: $color-gray-dark;
