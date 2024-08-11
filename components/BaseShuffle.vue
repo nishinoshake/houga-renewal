@@ -25,8 +25,10 @@ const playShuffle = () => {
   &-button {
     padding: 1rem;
     letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include font-l;
-    @include center-flex;
     @include desktop {
       border-width: 2px;
     }
@@ -59,7 +61,9 @@ const playShuffle = () => {
       padding-left: 0.3rem;
       border: 1px solid $color-black;
       border-radius: 50%;
-      @include center-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @include desktop {
         border-width: 2px;
       }

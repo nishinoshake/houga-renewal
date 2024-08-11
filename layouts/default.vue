@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-import '~/assets/scss/base/_reset.scss'
 import { fetchMovies } from '~/lib/api'
 
 useSeoMeta({
@@ -20,6 +19,7 @@ const { data } = await useAsyncData(() => fetchMovies())
 
 setMovies(data)
 </script>
+
 <style lang="scss">
 html {
   font-size: 12px;

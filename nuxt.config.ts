@@ -4,7 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      link: [{ rel: 'stylesheet', href: '/css/yakuhanmp-noto.css' }]
+      link: [
+        { rel: 'stylesheet', href: '/css/reset.css' },
+        { rel: 'stylesheet', href: '/css/yakuhanmp-noto.css' }
+      ]
     }
   },
   vite: {
